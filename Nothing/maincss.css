@@ -1,0 +1,139 @@
+@charset "utf-8";
+#Header{
+    color:rgb(255, 255, 255);
+    font-size: 1.2rem;
+    outline-width: 2px;
+    outline-color: black;
+    background-color: lime;
+    border: 5px dashed #00ffff;
+    padding:5px 20px;
+    margin: 30px auto;
+    width: 1150px;
+    text-align: center;
+    line-height: 1;
+    border-radius: 20%;
+    text-shadow: 1px 1px 2px gray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-image: linear-gradient(to bottom, #15ff00,#00ffff);
+}
+#Something{
+    color:red;
+    font-size: 1.1rem;
+    padding: 5px 20px;
+    margin: 30px;
+    border: 3px dotted goldenrod;
+    border-left: 10px solid goldenrod;
+    width: 300px;
+    border-radius: 20%;
+    text-shadow: 1px 1px 2px gray;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-image: linear-gradient(to bottom,orange, pink);
+}
+#By{
+    color:lime;
+    font-size: 0.9rem;
+    padding: 5px 20px;
+    margin: 30px;
+    border: 3px dotted blue;
+    border-left: 10px solid #00ffff;
+    width: 100px;
+    border-radius: 20%;
+    text-shadow: 1px 1px 2px rgb(149, 176, 226);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-image: linear-gradient(to bottom,cyan,blue);
+
+}
+#yt{
+    color:orange;
+    font-size: 1rem;
+}
+a{
+    color:rgb(243, 112, 255);
+    font-size:1rem
+}
+html{
+    font-size: 16px;
+    font-family:"Geist Mono",monospace;
+}
+body{
+    background-color:#f0e69c;
+    background-image: linear-gradient(to right, #f0e69c, #ff8c00);
+    background-size: 310px 183px;
+}
+#content{
+    margin:40px;
+    padding: 40px 90px;
+    border:1px solid #f6bb9e;
+    background-color: #fff;
+}
+.more{
+    text-align: right;
+}
+li{
+    list-style-type: none;
+    display: block;
+}
+li a:hover{
+    background-color: #15ff00;
+}
+li a{
+    display: block;
+    background-color: greenyellow;
+}
+.imgR{
+    float: right;
+    margin-left: 20px;
+}
+.imgL{
+    float: left;
+    margin-right: 20px;
+}
+.atable{
+    width: 600px;
+    margin-bottom: 30px;
+    margin: 5px 5px;
+    border-collapse: collapse;
+}
+.atable th,
+.atable td{
+    padding:10px 20px;
+    border:2px solid #f6bb9e;
+}
+.atable input[type="text"],
+.atable input[type="email"],
+.atable textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+.atable input[type="text"]:focus,
+.atable input[type="email"]:focus,
+.atable textarea:focus{
+    background-color: #ffffee;
+    outline: none;
+    border-left: 5px solid #ffa700;
+}
+label,input,textarea,select{
+    cursor: pointer;
+}
+.resubtns input{
+    width:200px;
+    margin: 0 10px;
+    padding:10px;
+    font-size:1em;
+    border-radius: 10px;
+    background-color: #ffbf49;
+}
+.resubtns input:hover{
+    opacity: 0.8;
+}
+.exelnoth{
+    border-collapse: collapse;
+    border: 1px solid greenyellow;
+    width:400px;
+    margin:5px 5px;
+    margin-bottom: 30px;
+    color: #ffa700;
+}
