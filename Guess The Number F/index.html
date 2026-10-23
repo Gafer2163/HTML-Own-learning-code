@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Guess The Number Version 6.5 (GUI)</title>
+        <meta charset="utf-8">
+    </head>
+<body>
+    <section id="header">
+<h1>Guess The Number<br></h1>
+<h2>Version 6.5 (GUI)</h2>
+</section>
+<h2><br><br></h2>
+<main>
+    <section class="sel">
+<h2>Guess:<br></h2>
+<button onclick="g(0)">0</button> 
+<button onclick="g(1)">1</button>
+<button onclick="g(2)">2</button>
+<button onclick="g(3)">3</button>
+<button onclick="g(4)">4</button>
+<button onclick="g(5)">5</button>
+<button onclick="g(6)">6</button>
+<button onclick="g(7)">7</button>
+<button onclick="g(8)">8</button>
+<button onclick="g(9)">9</button>
+<button onclick="g(10)">10</button> 
+<button onclick="g(11)">11</button>
+<button onclick="g(12)">12</button>
+<button onclick="g(13)">13</button>
+<button onclick="g(14)">14</button>
+<button onclick="g(15)">15</button>
+<button onclick="g(16)">16</button>
+<button onclick="g(17)">17</button>
+<button onclick="g(18)">18</button>
+<button onclick="g(19)">19</button>
+<button onclick="g(20)">20</button>
+<button onclick="g(21)">21</button>
+<button onclick="g(22)">22</button>
+<button onclick="g(23)">23</button>
+<button onclick="g(24)">24</button>
+<button onclick="g(25)">25</button>
+<button onclick="g(26)">26</button>
+<button onclick="g(27)">27</button>
+<button onclick="g(28)">28</button>
+<button onclick="g(29)">29</button>
+<button onclick="g(30)">30</button> 
+<button onclick="g(31)">31</button>
+<button onclick="g(32)">32</button>
+<button onclick="g(33)">33</button>
+<button onclick="g(34)">34</button>
+<button onclick="g(35)">35</button>
+<button onclick="g(36)">36</button>
+<button onclick="g(37)">37</button>
+<button onclick="g(38)">38</button>
+<button onclick="g(39)">39</button>
+<button onclick="g(40)">40</button> 
+<button onclick="g(41)">41</button>
+<button onclick="g(42)">42</button>
+<button onclick="g(43)">43</button>
+<button onclick="g(44)">44</button>
+<button onclick="g(45)">45</button>
+<button onclick="g(46)">46</button>
+<button onclick="g(47)">47</button>
+<button onclick="g(48)">48</button>
+<button onclick="g(49)">49</button>
+<button onclick="g(50)">50</button> 
+<button onclick="g(51)">51</button>
+<button onclick="g(52)">52</button>
+<button onclick="g(53)">53</button>
+<button onclick="g(54)">54</button>
+<button onclick="g(55)">55</button>
+<button onclick="g(56)">56</button>
+<button onclick="g(57)">57</button>
+<button onclick="g(58)">58</button>
+<button onclick="g(59)">59</button>
+<button onclick="g(60)">60</button> 
+<button onclick="g(61)">61</button>
+<button onclick="g(62)">62</button>
+<button onclick="g(63)">63</button>
+<button onclick="g(64)">64</button>
+<button onclick="g(65)">65</button>
+<button onclick="g(66)">66</button>
+<button onclick="g(67)">67</button>
+<button onclick="g(68)">68</button>
+<button onclick="g(69)">69</button>
+<button onclick="g(70)">70</button> 
+<button onclick="g(71)">71</button>
+<button onclick="g(72)">72</button>
+<button onclick="g(73)">73</button>
+<button onclick="g(74)">74</button>
+<button onclick="g(75)">75</button>
+<button onclick="g(76)">76</button>
+<button onclick="g(77)">77</button>
+<button onclick="g(78)">78</button>
+<button onclick="g(79)">79</button>
+<button onclick="g(80)">80</button> 
+<div id="rcont"></div>
+<button onclick="reset()">Reset</button>
+</section>
+</main>
+<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+<script>
+let num = 0
+this.S = {
+    int: function() {
+        num = Math.floor(Math.random() * 81)
+        if(num === 0 || num === 2){
+            num = Math.floor(Math.random() * 81)
+            if(num >20){
+                num = Math.floor(Math.random() * 81)
+            }
+        }
+        this.iiws()
+    },
+    reset: function() {
+        num = Math.floor(Math.random() * 81)
+        console.log("number Reseted")
+        if(num === 0 || num === 2){
+            num = Math.floor(Math.random() * 81)
+            if(num >20){
+                num = Math.floor(Math.random() * 81)
+            }
+        }
+        this.iiws()
+    },
+    G: function(gunum){
+        if(gunum === num){
+            console.log("Correct, Resetting Number...")
+            const correct = "Correct, Resetting Number..."
+            const contan = document.getElementById('rcont')
+            contan.innerHTML = `<p class="retx">${correct}</p>`;
+            this.reset()
+        } else if(gunum > num){
+            console.log("Maybe It is Smaller...")
+            const smaller = "Maybe It is Smaller..."
+            const contan = document.getElementById('rcont')
+            contan.innerHTML = `<p class="retx">${smaller}</p>`;
+        } else if(gunum < num){
+            console.log("Maybe It is Bigger...")
+            const bigger = "Maybe It is Bigger..."
+            const contan = document.getElementById('rcont')
+            contan.innerHTML = `<p class="retx">${bigger}</p>`;
+        }
+    },
+    iws : num,
+    iiws: function(){
+        this.iws = num
+    }
+}
+S.int()
+function g(gnum){
+    S.G(gnum)
+}
+function guess(gnum){
+    S.G(gnum)
+}
+function reset(){
+    S.reset()
+}
+</script>
+<style>@import url("css.css")</style>
+</body>
+</html>
