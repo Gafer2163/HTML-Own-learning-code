@@ -1,34 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>csslearn</title>
-        <meta charsset="utf-8">
+        <title>animation</title>
+        <meta charset="utf-8">
+        <style>
+            @keyframes rotate{
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+            #load span{
+                height: 50px;
+                width: 50px;
+                color:gold;
+                display: flex;
+                justify-content: center;
+                border-radius: 20px;
+                flood-color: gold;
+                animation: rotate 0.8s ease-in-out 0s infinite normal none;
+                z-index: 0;
+            }
+            #load{
+                position: relative;
+                left:60px;
+            }
+            body{
+                background-color: #000;
+            }
+            .s1{
+                position: relative;
+                left:597px;
+                top:430px;
+                background-color: deepskyblue;
+            }
+            .s2{
+                position: relative;
+                left:700px;
+                top:377px;
+                background-color: rgb(255, 159, 242);
+            }
+            .s3{
+                position: relative;
+                left:650px;
+                top:270px;
+                background-color: gold;
+                animation: rotate 0.8s ease-in-out 0.1s infinite normal none !important;
+            }
+            .s4{
+                position: relative;
+                left:597px;
+                top:167px;
+                background-color: rgb(255, 99, 99);
+            }
+            .s5{
+                position: relative;
+                left:700px;
+                top:115px;
+                background-color: rgb(198, 255, 141);
+            }
+            #cir{
+                position: relative;
+                border: 5px solid rgb(70, 70, 70);
+                width:350px;
+                height: 350px;
+                border-radius: 314.159265358979323846264338327950288419716939937510px;
+                left:555px;
+                top:-28px;
+                z-index: -10;
+                animation: spin 1s linear 0s infinite normal;
+                border-top-color: cyan;
+            }
+            @keyframes spin{
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+            h1{
+                background-image: url(./image.png);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                position: relative;
+                left:1350px;
+                bottom: -100px;
+                scale: 2;
+                
+            }
+        </style>
     </head>
-    <style>
-        *{
-            margin:0 0;
-            padding:0 0;
-        }
-        .textbg{
-            background-image: url(./image.png) ;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            scale: 4;
-        }
-        #text{
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        body{
-            background-color: #000;
-        }
-    </style>
+    <body>
+        <div id="load">
+        
+        <span class="s1"></span>
+        <span class="s2"></span>
+        <span class="s3"></span>
+        <span class="s4"></span>
+        <span class="s5"></span>
+        </div>
+        <div id="cir"></div>
+        <h1 id='loadt'>Loading</h1>
+        <script>
+            const loadt = document.getElementById('loadt')
+            let t = 1
+            let content = 'Loading'
+            setInterval(() => {
+            t = (t + 1) % 4; 
+            loadt.textContent = 'Loading' + '.'.repeat(t);
+            }, 500);
+        </script>
+    </body>
 </html>
-<body>
-    <div id="text">
-        <h1 class="textbg">Hello World</h1>
-    </div>
-</body>
